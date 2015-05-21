@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 18:21:14 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 20:17:27 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/05/21 21:10:29 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,22 @@ static void	duo_solu(float *elem, float discri)
 	printf("Deux solution : x1 = %g\tx2 = %g\n", result.a, result.b);
 }
 
+static void	duo_solu_ima(float *elem, float discri)
+{
+	t_num	r;
+
+	r.a = -elem[b] / (2 * elem[a]);
+	r.b = (ft_sqrt(-discri)) / (2 * elem[a]);
+	printf("Discriminant negatif.\n");
+	if (r.b != 1)
+	{
+		printf("Deux solution complex : ");
+		printf("x1 = %g + %gi\tx2 = %g - %gi\n", r.a, r.b, r.a, r.b);
+	}
+	else
+		printf("Deux solution complex : x1 = %g + i\tx2 = %g - i\n", r.a, r.a);
+}
+
 static int	init_degree(int size, float *elem)
 {
 	int degree;
@@ -57,13 +73,12 @@ void		solu(float *elem, float discri, int size)
 		else
 			printf("Aucune Solution\n");
 	else if (degree == 1)
-		printf("x = %f\n", (-elem[c] / elem[b]));
+		printf("x = %g\n", (-elem[c] / elem[b]));
 	else if (degree == 2)
 	{
 		if (discri < 0)
 		{
-			printf("Discriminant strictement negatif.\n");
-			printf("Pas de solution dans les reel");
+			duo_solu_ima(elem, discri);
 		}
 		else if (discri == 0)
 			uni_solu(elem);
