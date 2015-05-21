@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 19:03:47 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 19:20:58 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/05/21 20:02:23 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ static void		polynome(char *equ)
 	elem1 = init_elem(pow_max(split[0]), split[0]);
 	elem2 = init_elem(pow_max(split[1]), split[1]);
 	elem1 = simply(elem1, elem2, pow_max(split[0]), pow_max(split[1]));
+	get_reduce(elem1, size);
 	solu(elem1, get_discriminant(elem1), size);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 18:21:14 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 19:20:55 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/05/21 20:17:27 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	uni_solu(float *elem)
 
 	result = (elem[b]) / (2 * (elem[a]));
 	result *= -1;
-	printf("Discriminant egal a zero.\nUne solution : x = %f.\n", result);
+	printf("Discriminant egal a zero.\nUne solution : x = %.0f.\n", result);
 }
 
 static void	duo_solu(float *elem, float discri)
@@ -30,7 +30,7 @@ static void	duo_solu(float *elem, float discri)
 	result.a = (-elem[b] - ft_sqrt(discri)) / (2 * elem[a]);
 	result.b = (-elem[b] + ft_sqrt(discri)) / (2 * elem[a]);
 	printf("Discriminant positif.\n");
-	printf("Deux solution : x1 = %f\tx2 = %f\n", result.a, result.b);
+	printf("Deux solution : x1 = %g\tx2 = %g\n", result.a, result.b);
 }
 
 static int	init_degree(int size, float *elem)

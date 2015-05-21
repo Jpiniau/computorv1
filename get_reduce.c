@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   poly.h                                             :+:      :+:    :+:   */
+/*   get_reduce.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/05/21 19:39:16 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 20:06:15 by jpiniau          ###   ########.fr       */
+/*   Created: 2015/05/21 19:47:59 by jpiniau           #+#    #+#             */
+/*   Updated: 2015/05/21 20:16:31 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POLY_H
-# define POLY_H
+#include <stdio.h>
 
-enum{c, b, a};
-
-typedef struct	s_num
+void	get_reduce(float *elem, int size)
 {
-	float		a;
-	float		b;
-}				t_num;
+	int	i;
 
-float			get_discriminant(float *elem);
-int				pow_max(char *equ);
-float			*simply(float *elem1, float *elem2, int e1, int e2);
-void			solu(float *elem, float discri, int size);
-float			get_nbr(char *equ, char symb);
-void			get_reduce(float *elem, int size);
-
-#endif
+	i = -1;
+	printf("Forme reduite :");
+	while (++i <= size)
+	{
+		if (i == 0)
+			printf("%g * X^0", elem[0]);
+		else
+			if (elem[i] > 0)
+				printf(" + %g * X^%d", elem[i], i);
+			else if (elem[i] < 0)
+				printf(" - %g * X^%d", elem[i] * -1, i);
+	}
+	printf("\n");
+}
