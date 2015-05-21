@@ -6,7 +6,7 @@
 #    By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/21 18:02:43 by jpiniau           #+#    #+#              #
-#    Updated: 2015/05/21 18:42:24 by jpiniau          ###   ########.fr        #
+#    Updated: 2015/05/21 19:02:23 by jpiniau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = main.c\
 	  solu.c\
 	  simply.c\
 	  get_discriminant.c\
-	  pow_max.c
+	  pow_max.c\
+	  get_nbr.c
 
 OBJ = $(SRC:.c=.o)
 
