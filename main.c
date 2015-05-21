@@ -110,32 +110,9 @@ static void	polynome(char *equ)
 		if (elem1[i] != 0)
 			degree = i;
 	printf("Degree : %d\n", degree);
-	if (degree == 2)
-	{
-		discri = get_discriminant(elem1);
-		printf("Discriminant : %f\n", discri);
-		if (discri < 0)
-			printf("Discriminant strictement negatif.\nPas de solution dans les reel");
-		else if (discri == 0)
-			uni_solu(elem1);
-		else
-			duo_solu(elem1, discri);
-	}
-	else if (degree == 1)
-	{
-		printf("x = %f\n", (-elem1[c] / elem1[b]));
-	}
-	else if (degree > 2)
-		printf("Le degree est superieur a 2, ne peut pas etre resolu par le programme\n");
-	else if (degree == 0)
-	{
-		if (elem1[0] == 0)
-			printf("Tout les nombres reels sont solutions\n");
-		else
-			printf("Aucune Solution\n");
-	}
-	else
-		printf("Aucune solution dans R\n");
+	discri = get_discriminant(elem1);
+	printf("Discriminant : %f\n", discri);
+	solu(elem1, discri, degree);
 }
 
 int		main(int ac, char **av)

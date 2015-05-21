@@ -6,7 +6,7 @@
 #    By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/21 18:02:43 by jpiniau           #+#    #+#              #
-#    Updated: 2015/05/21 18:10:39 by jpiniau          ###   ########.fr        #
+#    Updated: 2015/05/21 18:42:24 by jpiniau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ all : lib $(NAME)
 
 lib :
 	@echo "creation de la libft"
-	@make -C libft
+	@make -C libft/
 
 $(NAME) : $(OBJ)
 	gcc $(FLAGS) -o $(NAME) $^ -L libft/ -lft
@@ -37,4 +37,9 @@ $(NAME) : $(OBJ)
 	gcc $(FLAGS) -o $@ -c $< -I $(INCLUDES)
 
 clean :
-	rm -fr *.c
+	rm -fr *.o
+
+fclean : clean
+		rm -fr $(NAME)
+
+re : fclean all

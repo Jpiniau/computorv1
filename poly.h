@@ -10,9 +10,10 @@ typedef struct	s_num
 }		t_num;
 
 float	get_discriminant(float *elem);
-void	uni_solu(float *elem);
-void	duo_solu(float *elem, float discri);
-int	pow_max(char *equ);
+//void	uni_solu(float *elem);
+//void	duo_solu(float *elem, float discri);
+int		pow_max(char *equ);
 float	*simply(float *elem1, float *elem2, int e1, int e2);
+void	solu(float *elem, float discri, int degree);
 
 #endif
