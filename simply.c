@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 19:40:47 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 21:06:45 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/05/29 17:46:19 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ float *simply(float *elem1, float *elem2, int e1, int e2)
 		{
 			elem2[i] = elem2[i] + (-1 * elem1[i]);
 			elem2[i] *= -1;
+		}
+		while (++i <= e2)
+		{
+			if (elem2[i] != 0)
+				elem2[i] *= -1;
 		}
 		return (elem2);
 	}

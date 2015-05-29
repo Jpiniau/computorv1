@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 19:47:59 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 21:15:57 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/05/29 18:05:02 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	print_r(int i, float *elem, int first)
 	}
 	else
 	{
-		if (elem[i] > 0)
+		if (elem[i] >= 0)
 		{
 			if (first)
 				printf(" + ");
