@@ -6,13 +6,13 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 19:40:47 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/29 17:46:19 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/10/22 16:09:08 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "poly.h"
 
-float *simply(float *elem1, float *elem2, int e1, int e2)
+float	*simply(float *elem1, float *elem2, int e1, int e2)
 {
 	int	i;
 

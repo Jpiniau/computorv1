@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 18:21:14 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/29 17:59:18 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/10/22 16:15:43 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,5 @@ void		solu(float *elem, float discri, int size)
 			duo_solu(elem, discri);
 	}
 	else
-		printf("Degree supperieur a 2, le programme ne peut pas trouver de solution\n");
+		printf("Degree supperieur a 2 !\n");
 }
