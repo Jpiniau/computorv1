@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 19:03:47 by jpiniau           #+#    #+#             */
-/*   Updated: 2015/05/21 21:19:08 by jpiniau          ###   ########.fr       */
+/*   Updated: 2015/10/22 14:17:17 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,16 @@ static void		polynome(char *equ)
 	char	**split;
 
 	split = ft_strsplit(equ, '=');
+	if (!verify (split[0]))
+	{
+		ft_putstr("error part 1\n");
+		return ;
+	}
+	if (!verify(split[1]))
+	{
+		ft_putstr("error part 2\n");
+		return ;
+	}
 	size = (pow_max(split[0]) > pow_max(split[1])) ?
 		pow_max(split[0]) : pow_max(split[1]);
 	elem1 = init_elem(pow_max(split[0]), split[0]);
